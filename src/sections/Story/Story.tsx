@@ -17,8 +17,7 @@ export const Story = () => {
             className="absolute inset-0 h-[100dvh] w-full transition-opacity duration-1000 story-bg"
             style={{
               opacity: activeChapter === index ? 1 : 0,
-              backgroundImage: `url('${chapter.backgroundImage}')`,
-              // Custom CSS properties for better control
+              backgroundImage: `url(${chapter.backgroundImage})`, // Modificado aquí
               '--bg-position-mobile': 'center center',
               '--bg-position-desktop': chapter.desktopPosition || 'center 40%',
               '--bg-size-mobile': 'cover',
