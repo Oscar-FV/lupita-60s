@@ -74,6 +74,22 @@ export const Details = () => {
         </motion.h2>
 
         <div className="grid gap-6 md:grid-cols-2">
+          
+          {/* Time Card */}
+          <motion.div
+            className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-white"
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <Clock className="h-6 w-6 text-primary" />
+              <h3 className="text-2xl font-title">Sábado 28 de Junio</h3>
+            </div>
+            <p className="text-gray-300 text-xl">{details.time}</p>
+          </motion.div>
           <motion.div
             className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-white"
             initial={{ opacity: 0, x: -20 }}
@@ -97,21 +113,6 @@ export const Details = () => {
             </a>
           </motion.div>
 
-          {/* Time Card */}
-          <motion.div
-            className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-white"
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.3 }}
-          >
-            <div className="flex items-center gap-3 mb-4">
-              <Clock className="h-6 w-6 text-primary" />
-              <h3 className="text-2xl font-title">Sábado 28 de Junio</h3>
-            </div>
-            <p className="text-gray-300 text-xl">{details.time}</p>
-          </motion.div>
         </div>
 
         <motion.div
